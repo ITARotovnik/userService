@@ -48,7 +48,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User getUserByName(String firstName){
-        log.info("Fetching user by name: ", firstName);
+        log.info("Fetching user by name: {}", firstName);
         Optional<User> user = userRepository.findByFirstName(firstName);
         return user.orElse(null);
     }
@@ -56,7 +56,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User updateUser(String id, User user){
-        log.info("Updating user by id: ", id);
+        log.info("Updating user by id: {}", id);
         Optional<User> user1 = userRepository.findById(id);
 
         if(user1.isPresent()){
@@ -82,7 +82,7 @@ public class UserServiceImpl implements UserService{
 
     public String deleteUser(String id){
         if(userRepository.findById(id).isPresent()){
-            log.info("Deleting user by id: ", id);
+            log.info("Deleting user by id: {}", id);
             userRepository.deleteById(id);
             return "User deleted";
         }
