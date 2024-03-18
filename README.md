@@ -55,7 +55,7 @@ The following endpoints are available in this application:
 
 - `GET /users`: Get all users.
 - `GET /users/{id}`: Get user by ID.
-- `GET /users/{byName}: Get user by their name
+- `GET /users/{byName}`: Get user by their name
 - `POST /users`: Create a new user.
 - `PUT /users/{id}`: Update an existing user.
 - `DELETE /users/{id}`: Delete a user by ID.
